@@ -1,6 +1,4 @@
 spring:
-  config:
-    import: configserver:http://localhost:5555
   datasource:
     url: jdbc:mysql://localhost:3306/ioi_24_b2?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
