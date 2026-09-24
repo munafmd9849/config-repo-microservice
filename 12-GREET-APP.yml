@@ -1,0 +1,26 @@
+spring:
+  config:
+    import: configserver:http://localhost:5555
+  datasource:
+    url: jdbc:mysql://localhost:3306/ioi_24_b2?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1.0
